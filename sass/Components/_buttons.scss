@@ -1,0 +1,22 @@
+/* Button Gradient */
+.btn {
+    border: none;
+    background: linear-gradient(350deg, #9356DC -11.44%, #FF79DA 123.93%);
+    box-shadow: 0px 1px 5px #00000082;
+    border-radius: 30px;
+    color: white;
+    width: 52%;
+    height: 45px;
+    
+    
+}
+
+.btn-fct {
+    border: none;
+    background:#F7F7F7 ;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    width: 90%;
+    height: 65px;
+    margin-bottom: 20px;
+}

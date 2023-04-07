@@ -1,3 +1,187 @@
+body {
+  font-family: "roboto";
+  max-width: 1440px;
+  margin: 0;
+  width: 100%;
+}
 
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Button Gradient */
+.btn {
+  border: none;
+  background: linear-gradient(350deg, #9356DC -11.44%, #FF79DA 123.93%);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5098039216);
+  border-radius: 30px;
+  color: white;
+  width: 52%;
+  height: 45px;
+}
+
+.btn-fct {
+  border: none;
+  background: #F7F7F7;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  width: 90%;
+  height: 65px;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding-top: 20px;
+  width: 100%;
+}
+footer h3 {
+  font-family: shrikhand;
+  font-size: 16px;
+  padding-left: 22px;
+  padding-bottom: 10px;
+}
+footer p {
+  font-size: 15px;
+  font-weight: 400;
+  padding-left: 22px;
+  padding-bottom: 10px;
+}
+footer p i {
+  padding-right: 10px;
+}
+footer p a {
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  background: #FFFFFF;
+}
+header img {
+  width: 40%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav .localisation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #EAEAEA;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+nav .localisation i {
+  padding-right: 10px;
+}
+nav .reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F6F6F6;
+  padding-bottom: 40px;
+  width: 100%;
+}
+nav .reservation h1 {
+  width: 70%;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+nav .reservation p {
+  width: 80%;
+  margin: 0;
+  margin-bottom: 25px;
+}
+nav .reservation a {
+  color: white;
+}
+nav .fct {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+nav .fct button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 20px;
+  padding-right: 55px;
+}
+
+main {
+  display: flex;
+}
+main .restaurant {
+  background-color: #F6F6F6;
+  width: 100%;
+}
+main .card {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 230px;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+main .card a {
+  color: black;
+}
+main .card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+main .card h3 {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+main .card p {
+  padding-top: 5px;
+  padding-left: 10px;
+}
+main .card .restaurant-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+main .card .restaurant-title i {
+  padding-right: 20px;
+}
 
 /*# sourceMappingURL=style.css.map */
