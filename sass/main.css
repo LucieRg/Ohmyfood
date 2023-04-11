@@ -1,6 +1,33 @@
 body {
   font-family: "roboto";
   max-width: 1440px;
+  margin: 0;
+  width: 100%;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 17px;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Button Gradient */
@@ -24,6 +51,43 @@ body {
   margin-bottom: 20px;
 }
 
+.btn-menu {
+  border: none;
+  background: #F7F7F7;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  width: 92%;
+  height: 75px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding-top: 20px;
+  width: 100%;
+}
+footer h3 {
+  font-family: shrikhand;
+  font-size: 16px;
+  padding-left: 22px;
+  padding-bottom: 10px;
+}
+footer p {
+  font-size: 15px;
+  font-weight: 400;
+  padding-left: 22px;
+  padding-bottom: 10px;
+}
+footer p i {
+  padding-right: 10px;
+}
+footer p a {
+  color: white;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -41,13 +105,14 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 nav .localisation {
   display: flex;
   justify-content: center;
   width: 100%;
   background-color: #EAEAEA;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 nav .localisation i {
   padding-right: 10px;
@@ -57,19 +122,22 @@ nav .reservation {
   flex-direction: column;
   align-items: center;
   background-color: #F6F6F6;
-  width: 100%;
   padding-bottom: 40px;
+  width: 100%;
 }
 nav .reservation h1 {
+  width: 70%;
   margin: 0;
   margin-top: 30px;
   margin-bottom: 10px;
-  width: 65%;
 }
 nav .reservation p {
+  width: 80%;
   margin: 0;
   margin-bottom: 25px;
-  width: 78%;
+}
+nav .reservation a {
+  color: white;
 }
 nav .fct {
   display: flex;
@@ -77,5 +145,112 @@ nav .fct {
   width: 100%;
 }
 nav .fct button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   margin-left: 20px;
+  padding-right: 55px;
+}
+
+main {
+  display: flex;
+}
+main .restaurant {
+  background-color: #F6F6F6;
+  width: 100%;
+}
+main .card {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 230px;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+main .card a {
+  color: black;
+}
+main .card img {
+  width: 100%;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+main .card h3 {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+main .card p {
+  padding-top: 5px;
+  padding-left: 10px;
+}
+main .card .restaurant-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+main .card .restaurant-title i {
+  padding-right: 20px;
+}
+
+header i {
+  position: absolute;
+  left: 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+main .menu {
+  width: 100%;
+  background-color: #F6F6F6;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding-bottom: 32px;
+}
+main .menu h2 {
+  display: flex;
+  justify-content: space-between;
+  font-family: shrikhand;
+  font-size: 25px;
+  padding: 0;
+  margin-left: 15px;
+  margin-right: 35px;
+}
+main .menu h3 {
+  font-weight: 300;
+  margin-left: 15px;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  height: 25px;
+}
+main .btn-menu h4 {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+main .btn-menu p {
+  font-size: 15px;
+}
+main .price {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+main .commander {
+  display: flex;
+  justify-content: center;
+}
+main .commander a {
+  color: white;
 }/*# sourceMappingURL=main.css.map */
