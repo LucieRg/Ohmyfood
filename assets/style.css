@@ -110,7 +110,7 @@ nav .localisation {
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: #EAEAEA;
+  background: #EAEAEA;
   padding-bottom: 15px;
   padding-top: 15px;
 }
@@ -151,6 +151,54 @@ nav .fct button {
   margin-left: 20px;
   padding-right: 55px;
 }
+nav .one {
+  position: absolute;
+  top: 440px;
+  left: 8px;
+  background-color: #9356DC;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+nav .one p {
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
+  color: white;
+  font-size: 15px;
+}
+nav .two {
+  position: absolute;
+  top: 523px;
+  left: 8px;
+  background-color: #9356DC;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+nav .two p {
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
+  color: white;
+  font-size: 15px;
+}
+nav .three {
+  position: absolute;
+  top: 610px;
+  left: 8px;
+  background-color: #9356DC;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+}
+nav .three p {
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
+  color: white;
+  font-size: 15px;
+}
 
 main {
   display: flex;
@@ -158,6 +206,38 @@ main {
 main .restaurant {
   background-color: #F6F6F6;
   width: 100%;
+}
+main .new {
+  position: absolute;
+  right: 30px;
+  margin-top: 15px;
+  background-color: #99E2D0;
+  width: 75px;
+  height: 28px;
+}
+main .new p {
+  display: flex;
+  justify-content: center;
+  color: #008766;
+  font-weight: 400;
+  font-size: 14px;
+  padding-top: 5px;
+}
+main .new-2 {
+  position: absolute;
+  right: 30px;
+  top: 1010px;
+  background-color: #99E2D0;
+  width: 75px;
+  height: 28px;
+}
+main .new-2 p {
+  display: flex;
+  justify-content: center;
+  color: #008766;
+  font-weight: 400;
+  font-size: 14px;
+  padding-top: 5px;
 }
 main .card {
   margin-left: 20px;
@@ -205,14 +285,20 @@ main {
   display: flex;
   flex-direction: column;
 }
-main .menu {
+main img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+main .position {
+  position: absolute;
+  top: 278px;
   width: 100%;
   background-color: #F6F6F6;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  padding-bottom: 32px;
 }
-main .menu h2 {
+main .position h2 {
   display: flex;
   justify-content: space-between;
   font-family: shrikhand;
@@ -221,12 +307,18 @@ main .menu h2 {
   margin-left: 15px;
   margin-right: 35px;
 }
+main .menu {
+  width: 100%;
+  background-color: #F6F6F6;
+  padding-bottom: 32px;
+}
 main .menu h3 {
   font-weight: 300;
   margin-left: 15px;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   height: 25px;
+  margin-top: 15px;
 }
 main .btn-menu h4 {
   font-weight: 500;

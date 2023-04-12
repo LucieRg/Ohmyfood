@@ -12,14 +12,21 @@ main {
 
     display: flex;
     flex-direction: column;
+    
+   img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 
-    .menu {
+   }
 
+    .position {
+        position: absolute;
+        top: 278px;
         width: 100%;
-        background-color: #F6F6F6;
+        background-color:#F6F6F6;
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
-        padding-bottom: 32px;
 
         h2 {
             display: flex;
@@ -31,6 +38,11 @@ main {
             margin-right: 35px;
 
         }
+    }
+    .menu {
+        width: 100%;
+        background-color: #F6F6F6;
+        padding-bottom: 32px;
 
 
 
@@ -40,11 +52,15 @@ main {
             border-bottom:3px solid #99E2D0 ;
             width: 40px;
             height: 25px;
+            margin-top: 15px;
             
         }
-
+        
+     
 
     }
+    
+
 
 
     .btn-menu {

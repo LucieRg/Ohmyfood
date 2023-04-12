@@ -5,6 +5,46 @@ main {
         background-color: #F6F6F6;
         width: 100%;
     }
+    .new{
+        position: absolute;
+        right: 30px;
+        margin-top: 15px;
+        background-color:#99E2D0;
+        width: 75px;
+        height:28px;
+
+        p{
+            display: flex;
+            justify-content: center;
+            color:#008766 ;
+            font-weight: 400;
+            font-size: 14px;
+            padding-top: 5px;
+        }
+    }
+    .new-2{
+        position: absolute;
+        right: 30px;
+        top:1010px;
+        background-color:#99E2D0;
+        width: 75px;
+        height:28px;
+
+        p{
+            display: flex;
+            justify-content: center;
+            color:#008766 ;
+            font-weight: 400;
+            font-size: 14px;
+            padding-top: 5px;
+        }
+
+    
+    }
+
+    
+    
+
 
     .card {
         margin-left: 20px;
@@ -43,6 +83,8 @@ main {
 
             i{
                 padding-right: 20px;
+
+
             }
         }
 

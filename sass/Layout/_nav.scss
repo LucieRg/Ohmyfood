@@ -9,7 +9,7 @@ nav {
         display: flex;
         justify-content: center;
         width: 100%;
-        background-color: #EAEAEA;
+        background: #EAEAEA;
         padding-bottom: 15px;
         padding-top: 15px;
 
@@ -60,6 +60,58 @@ nav {
             padding-right: 55px;
         }
         
+    }
+    .one {
+        position: absolute;
+        top: 440px;
+        left: 8px;
+        background-color: #9356DC;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+            p{
+                display: flex;
+                justify-content: center;
+                padding-top: 4px;
+                color: white;
+                font-size: 15px;
+            }
+    }
+
+    .two {
+        position: absolute;
+        top: 523px;
+        left: 8px;
+        background-color: #9356DC;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+            p{
+                display: flex;
+                justify-content: center;
+                padding-top: 4px;
+                color: white;
+                font-size: 15px;
+            }
+
+    }
+
+    .three {
+        position: absolute;
+        top: 610px;
+        left: 8px;
+        background-color: #9356DC;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+            p{
+                display: flex;
+                justify-content: center;
+                padding-top: 4px;
+                color: white;
+                font-size: 15px;
+            }
+
     }
  
 }
