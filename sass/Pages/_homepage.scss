@@ -2,48 +2,50 @@ main {
     display: flex;
 
     .restaurant {
-        background-color: #F6F6F6;
+        background-color: $gray-light;
         width: 100%;
     }
-    .new{
+
+    .new {
         position: absolute;
         right: 30px;
         margin-top: 15px;
-        background-color:#99E2D0;
+        background-color: $color-tertiary;
         width: 75px;
-        height:28px;
+        height: 28px;
 
-        p{
+        p {
             display: flex;
             justify-content: center;
-            color:#008766 ;
+            color: $color-tertiary-strong ;
             font-weight: 400;
             font-size: 14px;
             padding-top: 5px;
         }
     }
-    .new-2{
+
+    .new-2 {
         position: absolute;
         right: 30px;
-        top:1010px;
-        background-color:#99E2D0;
+        top: 1010px;
+        background-color: $color-tertiary;
         width: 75px;
-        height:28px;
+        height: 28px;
 
-        p{
+        p {
             display: flex;
             justify-content: center;
-            color:#008766 ;
+            color: $color-tertiary-strong ;
             font-weight: 400;
             font-size: 14px;
             padding-top: 5px;
         }
 
-    
+
     }
 
-    
-    
+
+
 
 
     .card {
@@ -52,12 +54,12 @@ main {
         flex-direction: column;
         width: 90%;
         height: 230px;
-        background-color: white;
+        background-color: $white;
         border-radius: 20px;
         margin-bottom: 20px;
 
         a {
-            color: black;
+            color: $black;
         }
 
         img {
@@ -67,27 +69,40 @@ main {
             border-top-right-radius: 20px;
             border-top-left-radius: 20px;
         }
-    
-        h3{
+
+        h3 {
             padding-top: 10px;
             padding-left: 10px;
         }
-        p{
+
+        p {
             padding-top: 5px;
             padding-left: 10px;
         }
-        .restaurant-title {
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
 
-            i{
-                padding-right: 20px;
+        .heart{
+            position: absolute;
+            right: 35px;
+            padding-top:175px;
 
+        }
+    
+        .like {
+            position: absolute;
+            right: 0em;
+            padding-top: 1px;
+            color: transparent;
+            background-image: linear-gradient(to top, rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
 
+            &:hover {
+                opacity: 1;
             }
         }
 
     }
+
 
 }

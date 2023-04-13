@@ -20,28 +20,45 @@ main {
 
    }
 
+   .like {
+    color: transparent;
+    background-image: linear-gradient(to top, rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+
+    &:active {
+        opacity: 1;
+        
+    }
+}
     .position {
         position: absolute;
         top: 278px;
         width: 100%;
-        background-color:#F6F6F6;
+        background-color:$gray-light;
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
 
         h2 {
-            display: flex;
-            justify-content: space-between;
             font-family: shrikhand;
             font-size: 25px;
             padding: 0;
             margin-left: 15px;
             margin-right: 35px;
 
+            i{
+                position: absolute;
+                right: 40px;
+            }
+
+
+
         }
     }
     .menu {
         width: 100%;
-        background-color: #F6F6F6;
+        background-color: $gray-light;
         padding-bottom: 32px;
 
 
@@ -49,7 +66,7 @@ main {
         h3 {
             font-weight: 300;
             margin-left: 15px;
-            border-bottom:3px solid #99E2D0 ;
+            border-bottom:3px solid $color-tertiary ;
             width: 40px;
             height: 25px;
             margin-top: 15px;
@@ -95,7 +112,7 @@ main {
         justify-content: center;
 
         a {
-            color: white;
+            color: $white;
         }
     }
 

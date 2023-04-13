@@ -12,4 +12,5 @@ $gray-medium: #EAEAEA;
 $gray-light: #F6F6F6;
 $white: #FFF;
 $black: #353535;
-$linear-gradient: linear-gradient(180deg, $color-secondary, $color-primary);
+$linear-gradient: linear-gradient($color-secondary, $color-primary);
+

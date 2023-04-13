@@ -1,19 +1,19 @@
 /* Button Gradient */
 .btn {
     border: none;
-    background: linear-gradient(350deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background: $linear-gradient;
     box-shadow: 0px 1px 5px #00000082;
     border-radius: 30px;
-    color: white;
+    color: $white;
     width: 52%;
     height: 45px;
+    }
     
-    
-}
+
 
 .btn-fct {
     border: none;
-    background:#F7F7F7 ;
+    background:$gray-light ;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     width: 90%;
@@ -23,7 +23,7 @@
 
 .btn-menu {
     border: none;
-    background:#F7F7F7 ;
+    background:$gray-light;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     width: 92%;
