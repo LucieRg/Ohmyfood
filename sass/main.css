@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .btn {
   transition-property: opacity, box-shadow;
   transition-duration: 900ms;
@@ -5,6 +6,150 @@
 .btn:hover {
   opacity: 80%;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: loader 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader__item {
+  height: 40px;
+  width: 10px;
+  border-radius: 1rem;
+  animation: jump 1s;
+  animation-iteration-count: 1;
+}
+.loader__itemContainer {
+  display: flex;
+  width: 5rem;
+  justify-content: space-between;
+}
+.loader__item--1 {
+  font-family: shrikhand;
+  background-color: #9356DC;
+}
+.loader__item--2 {
+  font-family: shrikhand;
+  background-color: #FF79DA;
+  animation-delay: 0.25s;
+}
+.loader__item--3 {
+  font-family: shrikhand;
+  background-color: #99E2D0;
+  animation-delay: 0.5s;
+}
+
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.5rem);
+  }
+  75% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.like {
+  color: transparent;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.like:hover {
+  opacity: 1;
+}
+
+.entrée {
+  opacity: 1;
+  animation: entrée 2s;
+}
+
+@keyframes entrée {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.plat {
+  opacity: 1;
+  animation: plat 3s;
+}
+
+@keyframes plat {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.dessert {
+  opacity: 1;
+  animation: dessert 3s;
+}
+
+@keyframes dessert {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.btn-menu {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.btn-menu:hover {
+  width: 80%;
+}
+
+.btn-check {
+  transform: translateX(10%);
+  transition: transform 0.2s;
+  opacity: 0;
+}
+.btn-check:hover {
+  transform: translateX(0%);
+  opacity: 1;
 }
 
 body {
@@ -72,6 +217,26 @@ a {
   margin-top: 20px;
 }
 
+.btn-check {
+  position: absolute;
+  display: flex;
+  right: 10px;
+  width: 80px;
+  height: 76px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #99E2D0;
+}
+.btn-check .fa-check-circle {
+  margin: auto;
+  color: #FFF;
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    width: 30%;
+  }
+}
 footer {
   background-color: #353535;
   color: #FFF;
@@ -107,7 +272,7 @@ header {
   background: #FFF;
 }
 header img {
-  width: 40%;
+  width: 150px;
 }
 
 nav {
@@ -134,24 +299,22 @@ nav .reservation {
   padding-bottom: 40px;
   width: 100%;
 }
-nav .reservation h1 {
-  width: 70%;
-  margin: 0;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-nav .reservation p {
-  width: 80%;
-  margin: 0;
-  margin-bottom: 25px;
-}
 nav .reservation a {
   color: #FFF;
+}
+nav .reservation-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin-left: 32px;
+  margin-bottom: 20px;
 }
 nav .fct {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  justify-content: center;
+  width: 90%;
 }
 nav .fct button {
   display: flex;
@@ -164,8 +327,8 @@ nav .fa-store {
   color: #9356DC;
 }
 nav .one {
-  position: absolute;
-  top: 440px;
+  position: relative;
+  top: 45px;
   left: 8px;
   background-color: #9356DC;
   width: 25px;
@@ -180,8 +343,8 @@ nav .one p {
   font-size: 15px;
 }
 nav .two {
-  position: absolute;
-  top: 523px;
+  position: relative;
+  top: 50px;
   left: 8px;
   background-color: #9356DC;
   width: 25px;
@@ -196,8 +359,8 @@ nav .two p {
   font-size: 15px;
 }
 nav .three {
-  position: absolute;
-  top: 610px;
+  position: relative;
+  top: 50px;
   left: 8px;
   background-color: #9356DC;
   width: 25px;
@@ -212,6 +375,15 @@ nav .three p {
   font-size: 15px;
 }
 
+@media screen and (min-width: 768px) {
+  nav .fct {
+    width: 50%;
+  }
+  nav .fct h2 {
+    position: relative;
+    left: -50%;
+  }
+}
 main {
   display: flex;
 }
@@ -221,11 +393,12 @@ main .restaurant {
 }
 main .new {
   position: absolute;
-  right: 30px;
+  right: 10%;
   margin-top: 15px;
   background-color: #99E2D0;
   width: 75px;
   height: 28px;
+  z-index: 1000;
 }
 main .new p {
   display: flex;
@@ -234,22 +407,7 @@ main .new p {
   font-weight: 400;
   font-size: 14px;
   padding-top: 5px;
-}
-main .new-2 {
-  position: absolute;
-  right: 30px;
-  top: 1010px;
-  background-color: #99E2D0;
-  width: 75px;
-  height: 28px;
-}
-main .new-2 p {
-  display: flex;
-  justify-content: center;
-  color: #008766;
-  font-weight: 400;
-  font-size: 14px;
-  padding-top: 5px;
+  padding-right: 10px;
 }
 main .card {
   margin-left: 20px;
@@ -263,6 +421,10 @@ main .card {
 }
 main .card a {
   color: #353535;
+  cursor: pointer;
+}
+main .card i {
+  cursor: pointer;
 }
 main .card img {
   width: 100%;
@@ -282,7 +444,7 @@ main .card p {
 }
 main .card .heart {
   position: absolute;
-  right: 35px;
+  right: 10%;
   padding-top: 175px;
 }
 main .card .like {
@@ -299,6 +461,26 @@ main .card .like:hover {
   opacity: 1;
 }
 
+@media screen and (min-width: 768px) {
+  main .restaurant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .restaurant h2 {
+    position: relative;
+    left: -40%;
+  }
+  main .card {
+    width: 60%;
+  }
+  main .card .heart {
+    right: 23%;
+  }
+  main .card .new {
+    right: 21%;
+  }
+}
 header i {
   position: absolute;
   left: 30px;
@@ -314,15 +496,8 @@ main img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .like {
-  color: transparent;
-  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-}
-main .like:active {
-  opacity: 1;
+main i {
+  cursor: pointer;
 }
 main .position {
   position: absolute;
@@ -355,6 +530,9 @@ main .menu h3 {
   width: 40px;
   height: 25px;
   margin-top: 15px;
+}
+main .btn-menu {
+  cursor: pointer;
 }
 main .btn-menu h4 {
   font-weight: 500;

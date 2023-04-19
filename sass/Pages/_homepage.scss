@@ -1,18 +1,17 @@
 main {
     display: flex;
+    background-color: $gray-light;
 
-    .restaurant {
-        background-color: $gray-light;
-        width: 100%;
-    }
+   
 
     .new {
         position: absolute;
-        right: 30px;
+        right:10%;
         margin-top: 15px;
         background-color: $color-tertiary;
         width: 75px;
         height: 28px;
+        z-index: 1000;
 
         p {
             display: flex;
@@ -21,28 +20,10 @@ main {
             font-weight: 400;
             font-size: 14px;
             padding-top: 5px;
+            padding-right: 10px;
         }
     }
 
-    .new-2 {
-        position: absolute;
-        right: 30px;
-        top: 1010px;
-        background-color: $color-tertiary;
-        width: 75px;
-        height: 28px;
-
-        p {
-            display: flex;
-            justify-content: center;
-            color: $color-tertiary-strong ;
-            font-weight: 400;
-            font-size: 14px;
-            padding-top: 5px;
-        }
-
-
-    }
 
 
 
@@ -60,6 +41,10 @@ main {
 
         a {
             color: $black;
+            cursor: pointer;
+        }
+        i{
+            cursor: pointer;
         }
 
         img {
@@ -82,10 +67,11 @@ main {
 
         .heart{
             position: absolute;
-            right: 35px;
+            right: 10%;
             padding-top:175px;
 
         }
+       
     
         .like {
             position: absolute;
@@ -106,3 +92,100 @@ main {
 
 
 }
+
+
+// Responsive
+
+@media screen and (min-width: 768px) {
+
+    main{
+        .restaurant {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            
+         
+        }
+        
+        .card {
+
+            width: 60%;
+
+            .heart{
+                right: 25%;
+            }
+
+            .new {
+
+                right: 21%;
+            }
+        }
+    }
+
+    
+    
+}
+
+@media screen and (min-width: 1024px) {
+
+    main {
+        h2 {
+            margin-left: 62px;
+        }
+        .restaurant{
+            
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            width: 42%;
+
+            .heart{
+                right: 9%;
+            }
+            .new {
+                right: 8%;
+            }
+
+
+        }
+        
+        .new-resp {
+            left: 41%;
+        }
+       
+        
+
+        .heart-resp {
+            position: absolute;
+            left: 45%;
+        }
+
+        .like-resp {
+            position: absolute;
+            left: 0rem;
+            padding-top: 1px;
+            color: transparent;
+            background-image: linear-gradient(to top, rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 1;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        
+        
+      
+    }
+
+
+
+}
+    
+  

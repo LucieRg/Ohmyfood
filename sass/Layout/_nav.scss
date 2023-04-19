@@ -3,7 +3,7 @@ nav {
     flex-direction: column;
     align-items: center;
 
-    
+
 
     .localisation {
         display: flex;
@@ -22,35 +22,33 @@ nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color:$gray-light;
+        background-color: $gray-light;
         padding-bottom: 40px;
         width: 100%;
-        
-        h1 {
-           width: 70%;
-            margin: 0;
-            margin-top: 30px;
-            margin-bottom: 10px;
-            
-        }
-        p{
-            width: 80%;
-            margin: 0;
-            margin-bottom: 25px;
-        
-        }
 
         a {
-    
+
             color: $white;
         }
-        
+
+    }
+
+    .reservation-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        margin-left: 32px;
+        margin-bottom: 20px;
+
+
     }
 
     .fct {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        justify-content: center;
+        width: 90%;
 
         button {
             display: flex;
@@ -59,62 +57,125 @@ nav {
             margin-left: 20px;
             padding-right: 55px;
         }
-        
+
     }
-    .fa-store{
+
+    .fa-store {
         color: $color-primary;
     }
+
     .one {
-        position: absolute;
-        top: 440px;
+        position: relative;
+        top: 45px;
         left: 8px;
         background-color: $color-primary;
         width: 25px;
         height: 25px;
         border-radius: 100%;
-            p{
-                display: flex;
-                justify-content: center;
-                padding-top: 4px;
-                color: $white;
-                font-size: 15px;
-            }
+
+        p {
+            display: flex;
+            justify-content: center;
+            padding-top: 4px;
+            color: $white;
+            font-size: 15px;
+        }
     }
 
     .two {
-        position: absolute;
-        top: 523px;
+        position: relative;
+        top: 50px;
         left: 8px;
         background-color: $color-primary;
         width: 25px;
         height: 25px;
         border-radius: 100%;
-            p{
-                display: flex;
-                justify-content: center;
-                padding-top: 4px;
-                color: $white;
-                font-size: 15px;
-            }
+
+        p {
+            display: flex;
+            justify-content: center;
+            padding-top: 4px;
+            color: $white;
+            font-size: 15px;
+        }
 
     }
 
     .three {
-        position: absolute;
-        top: 610px;
+        position: relative;
+        top: 50px;
         left: 8px;
         background-color: $color-primary;
         width: 25px;
         height: 25px;
         border-radius: 100%;
-            p{
-                display: flex;
-                justify-content: center;
-                padding-top: 4px;
-                color: $white;
-                font-size: 15px;
-            }
+
+        p {
+            display: flex;
+            justify-content: center;
+            padding-top: 4px;
+            color: $white;
+            font-size: 15px;
+        }
 
     }
- 
+
 }
+
+
+// Responsive
+
+@media screen and (min-width: 768px) {
+    nav {
+        .fct {
+            width: 50%;
+
+        
+        }
+
+    }
+
+
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    nav {
+        .fct{
+            width: 100%;
+
+            h2 {
+                margin-left: 62px;
+            }
+           
+        }
+        .btn-fct-resp{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .one{
+        top: 20px;
+        left: 25px;
+        }
+
+        .two {
+            top: 20px;
+            left: 25px;
+        }
+        .three{
+            top: 20px;
+            left: 25px;
+        }
+
+       
+       
+    
+    }
+}
+    
+
+
+    

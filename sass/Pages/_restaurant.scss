@@ -17,21 +17,15 @@ main {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    
 
    }
-
-   .like {
-    color: transparent;
-    background-image: linear-gradient(to top, rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
-    background-clip: text;
-    -webkit-background-clip: text;
-    opacity: 0;
-
-    &:active {
-        opacity: 1;
-        
-    }
+   i{
+    cursor: pointer;
 }
+
+ 
+
     .position {
         position: absolute;
         top: 278px;
@@ -81,6 +75,7 @@ main {
 
 
     .btn-menu {
+        cursor: pointer;
 
 
         h4 {
@@ -91,10 +86,13 @@ main {
             margin-left: 10px;
             padding-top: 15px;
             padding-bottom: 5px;
+          
         }
 
         p {
             font-size: 15px;
+          
+        
         }
 
     }
@@ -104,6 +102,8 @@ main {
         justify-content: space-between;
         margin-left: 10px;
         margin-right: 20px;
+
+     
 
     }
 
@@ -118,3 +118,63 @@ main {
 
 
 }
+
+@media screen and (min-width: 1024px) {
+
+    main {
+        background-color: $white;
+
+        .position {
+            width: 71%;
+            left: 15%;
+            top: 300px;
+            
+            h2{
+               display: flex;
+               justify-content: center;
+               i {
+                right: 25%;
+               }
+            }
+            
+        }
+
+        .menu {
+            position: relative;
+            left: 15%;
+            width: 71%;
+           
+        }
+
+        .entrée {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3 {
+                position: relative;
+                right: 35%;
+            }
+        }
+        .plat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3 {
+                position: relative;
+                right: 35%;
+            }
+        }
+
+        .dessert {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3 {
+                position: relative;
+                right: 35%;
+            }
+        }
+
+    }
+}
+

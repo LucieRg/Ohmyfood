@@ -7,13 +7,14 @@
     color: $white;
     width: 52%;
     height: 45px;
-    }
-    
+   
+}
+
 
 
 .btn-fct {
     border: none;
-    background:$gray-light ;
+    background: $gray-light ;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     width: 90%;
@@ -23,7 +24,7 @@
 
 .btn-menu {
     border: none;
-    background:$gray-light;
+    background: $gray-light;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     width: 92%;
@@ -32,4 +33,51 @@
     margin-left: 15px;
     margin-top: 20px;
 
+}
+
+.btn-check {
+    position: absolute;
+    display: flex;
+    right: 10px;
+    width: 80px;
+    height: 76px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: $color-tertiary;
+
+    .fa-check-circle {
+        margin: auto;
+        color: $white;
+    }
+}
+
+// Responsive
+
+@media screen and (min-width: 768px) {
+    .btn {
+
+        width: 30%;
+    }
+  
+    
+
+    
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .btn {
+        width: 20%;
+    }
+  
+    .btn-fct{
+        width: 25%;
+        
+    }
+
+    .btn-menu {
+        width: 75%;
+    }
+
+    
 }

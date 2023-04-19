@@ -1,180 +1,222 @@
 .btn {
-    transition-property: opacity, box-shadow;
-    transition-duration: 900ms;
+  transition-property: opacity, box-shadow;
+  transition-duration: 900ms;
 
-    &:hover {
-        opacity: 80%;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.80);
-    }
+  &:hover {
+    opacity: 80%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.80);
+  }
 }
 
 //  loader
-.loader-body {
-    animation: body 2.5s;
-    z-index: 2;
-    opacity: 1;
-}
-
-
 .loader {
-    position: fixed;
-    width: 150px;
-    top: 500px;
-    left: 110px;
-    z-index: 1000;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.90);
+  animation: loader 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  &__item {
+    height: 40px;
+    width: 10px;
+    border-radius: 1rem;
+    animation: jump 1s;
+    animation-iteration-count: 1;
+
+    &Container {
+      display: flex;
+      width: 5rem;
+      justify-content: space-between;
+    }
+
+    &--1 {
+
+
+      font-family: shrikhand;
+      background-color: $color-primary;
+    }
+
+    &--2 {
+
+      font-family: shrikhand;
+      background-color: $color-secondary;
+      animation-delay: 0.25s;
+    }
+
+    &--3 {
+
+      font-family: shrikhand;
+      background-color: $color-tertiary;
+      animation-delay: 0.5s;
+    }
+  }
+
+
 }
 
-.loader-text {
-    font-family: shrikhand;
-    position: absolute;
-    width: 100%;
-    color: $color-primary;
-    animation: text 2.5s;
+@keyframes itemAppear {
+  0% {
+    transform: scale(0)
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loader {
+  100% {
     opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(0.5rem);
+  }
+
+  75% {
+    transform: translateY(-0.5rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 
 }
 
-.load {
-    background-color: $color-primary-light;
-    border-radius: 50px;
-    display: block;
-    height: 16px;
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-    transform: translateX(70px);
-    animation: loading 2.5s;
-    animation-fill-mode: forwards;
-}
 
-.load::before {
-    position: absolute;
-    content: "";
-    width: 30%;
-    height: 100%;
-    background-color: $color-primary;
-    border-radius: inherit;
-    animation: loading2 2.5s;
 
-}
-@keyframes body {
-   0% {
+// heart
+
+
+.like {
+  color: transparent;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+
+  &:hover {
     opacity: 1;
-   }
-   0.1%{
-    opacity: 0.3;
-   }
-   100% {
-    opacity: 0.3;
-   }
-    
+
+  }
 }
 
-@keyframes text {
-    0% {
-        transform: translateX(0px);
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    40% {
-        letter-spacing: 1px;
-        transform: translateX(0px);
-    }
-
-    80% {
-        letter-spacing: 1px;
-        transform: translateX(32px);
-    }
-
-    90% {
-        letter-spacing: 2px;
-        transform: translateX(32px);
-        opacity: 1;
-    }
-
-    100% {
-        letter-spacing: 1px;
-        transform: translateX(0px);
-        opacity: 0;
-
-
-    }
+// menu
+.entrée {
+  opacity: 1;
+  animation: entrée 2s;
 }
 
-@keyframes loading {
-    0% {
-        width: 16px;
-        transform: translateX(0px);
-        opacity: 0;
+@keyframes entrée {
+  0% {
+    opacity: 0;
+  }
 
-    }
+  100% {
+    opacity: 1;
+  }
 
-    10% {
-        opacity: 1;
-    }
-
-    40% {
-        width: 100%;
-        transform: translateX(0px);
-    }
-
-    80% {
-        width: 16px;
-        transform: translateX(70px);
-    }
-
-    90% {
-        width: 100%;
-        transform: translateX(0px);
-        opacity: 1;
-    }
-
-    100% {
-        width: 16px;
-        transform: translateX(0px);
-        opacity: 0;
-
-
-    }
 }
 
-@keyframes loading2 {
-    0% {
-        transform: translateX(0px);
-        width: 16px;
-        opacity: 0;
-    }
+.plat {
+  opacity: 1;
+  animation: plat 3s;
+}
 
-    10% {
-        opacity: 1;
-    }
+@keyframes plat {
+  0% {
+    opacity: 0;
+  }
 
-    40% {
-        transform: translateX(0);
-        width: 80%;
-    }
+  10% {
+    opacity: 0;
+  }
 
-    80% {
-        width: 100%;
-        transform: translateX(0px);
-    }
+  100% {
+    opacity: 1;
+  }
 
-    90% {
-        width: 80%;
-        transform: translateX(15px);
-        opacity: 1;
-    }
+}
 
-    100% {
-        transform: translateX(0px);
-        width: 16px;
-        opacity: 0;
+.dessert {
+  opacity: 1;
+  animation: dessert 3s;
+}
 
-    }
+@keyframes dessert {
+  0% {
+    opacity: 0;
+  }
 
-    
+  20% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+
+.commander {
+  opacity: 1;
+  animation: commander 3s;
+}
+
+@keyframes commander {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+
+
+.btn-menu {
+ 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+ 
+
+   &:hover{
+    width: 80%;
+   }
+
+}
+
+.btn-check  {
+  transform: translateX(10%);
+  transition: transform 0.2s;
+  opacity: 0;
+
+
+  &:hover  {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }
