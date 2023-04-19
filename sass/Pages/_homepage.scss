@@ -99,6 +99,9 @@ main {
 @media screen and (min-width: 768px) {
 
     main{
+        h2{
+            margin-left: 142px;
+        }
         .restaurant {
             display: flex;
             flex-direction: column;

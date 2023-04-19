@@ -195,28 +195,21 @@
 
 }
 
-
-
 .btn-menu {
  
-    white-space: nowrap;
-    text-overflow: ellipsis;
- 
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
-   &:hover{
-    width: 80%;
-   }
+  &:hover  {
+  
+    .price {
+      min-width: calc(100% - 80px);
+    }
+  }
 
 }
 
 .btn-check  {
-  transform: translateX(10%);
-  transition: transform 0.2s;
-  opacity: 0;
+opacity: 1;
 
-
-  &:hover  {
-    transform: translateX(0%);
-    opacity: 1;
-  }
 }
