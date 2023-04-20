@@ -2,11 +2,11 @@ main {
     display: flex;
     background-color: $gray-light;
 
-   
+
 
     .new {
         position: absolute;
-        right:10%;
+        right: 10%;
         margin-top: 15px;
         background-color: $color-tertiary;
         width: 75px;
@@ -43,7 +43,8 @@ main {
             color: $black;
             cursor: pointer;
         }
-        i{
+
+        i {
             cursor: pointer;
         }
 
@@ -65,14 +66,20 @@ main {
             padding-left: 10px;
         }
 
-        .heart{
+        .heart {
             position: absolute;
             right: 10%;
-            padding-top:175px;
+            padding-top: 173px;
+        
 
         }
-       
-    
+
+        .heart-resp {
+            position: absolute;
+            right: 11%;
+        }
+
+
         .like {
             position: absolute;
             right: 0em;
@@ -98,24 +105,29 @@ main {
 
 @media screen and (min-width: 768px) {
 
-    main{
-        h2{
+    main {
+        h2 {
             margin-left: 142px;
         }
+
         .restaurant {
             display: flex;
             flex-direction: column;
             align-items: center;
 
-            
-         
+
+
         }
-        
+
         .card {
 
             width: 60%;
 
-            .heart{
+            .heart {
+                right: 25%;
+            }
+
+            .heart-resp{
                 right: 25%;
             }
 
@@ -126,8 +138,8 @@ main {
         }
     }
 
-    
-    
+
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -136,8 +148,9 @@ main {
         h2 {
             margin-left: 62px;
         }
-        .restaurant{
-            
+
+        .restaurant {
+
             flex-direction: row;
             align-items: center;
             justify-content: center;
@@ -146,26 +159,33 @@ main {
         .card {
             width: 42%;
 
-            .heart{
-                right: 9%;
+            .heart {
+               right: 9%;
+              
             }
+            .heart-resp {
+            right: 53%;
+    
+             
+               
+            }
+    
             .new {
                 right: 8%;
             }
 
+         
+
 
         }
-        
+
         .new-resp {
             left: 41%;
         }
-       
-        
 
-        .heart-resp {
-            position: absolute;
-            left: 45%;
-        }
+
+
+      
 
         .like-resp {
             position: absolute;
@@ -182,13 +202,11 @@ main {
             }
         }
 
-        
-        
-      
+
+
+
     }
 
 
 
 }
-    
-  

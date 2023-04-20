@@ -84,6 +84,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
+  transition: opacity 0.8s;
 }
 .like:hover {
   opacity: 1;
@@ -134,28 +135,38 @@
     opacity: 1;
   }
 }
+.commander {
+  opacity: 1;
+  animation: commander 3s;
+}
+
+@keyframes commander {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .btn-menu {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.btn-menu:hover {
-  width: 80%;
+.btn-menu:hover .price {
+  min-width: calc(100% - 80px);
 }
 
 .btn-check {
-  transform: translateX(10%);
-  transition: transform 0.2s;
-  opacity: 0;
-}
-.btn-check:hover {
-  transform: translateX(0%);
   opacity: 1;
 }
 
 body {
   font-family: "roboto";
   max-width: 1440px;
-  margin: 0;
+  margin: auto;
   width: 100%;
 }
 
@@ -206,6 +217,9 @@ a {
 }
 
 .btn-menu {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
   border: none;
   background: #F6F6F6;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -218,10 +232,9 @@ a {
 }
 
 .btn-check {
-  position: absolute;
   display: flex;
-  right: 10px;
-  width: 80px;
+  right: 11%;
+  width: 100px;
   height: 76px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -237,7 +250,20 @@ a {
     width: 30%;
   }
 }
+@media screen and (min-width: 1024px) {
+  .btn {
+    width: 20%;
+  }
+  .btn-fct {
+    width: 25%;
+  }
+  .btn-menu {
+    width: 75%;
+  }
+}
 footer {
+  display: flex;
+  flex-direction: column;
   background-color: #353535;
   color: #FFF;
   padding-top: 20px;
@@ -262,6 +288,18 @@ footer p a {
   color: #FFF;
 }
 
+@media screen and (min-width: 1024px) {
+  footer {
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  footer h3 {
+    position: absolute;
+    right: 8%;
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -377,19 +415,37 @@ nav .three p {
 
 @media screen and (min-width: 768px) {
   nav .fct {
-    width: 50%;
+    width: 68%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  nav .fct {
+    width: 100%;
   }
   nav .fct h2 {
-    position: relative;
-    left: -50%;
+    margin-left: 62px;
+  }
+  nav .btn-fct-resp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  nav .one {
+    top: 20px;
+    left: 25px;
+  }
+  nav .two {
+    top: 20px;
+    left: 25px;
+  }
+  nav .three {
+    top: 20px;
+    left: 25px;
   }
 }
 main {
   display: flex;
-}
-main .restaurant {
   background-color: #F6F6F6;
-  width: 100%;
 }
 main .new {
   position: absolute;
@@ -445,7 +501,11 @@ main .card p {
 main .card .heart {
   position: absolute;
   right: 10%;
-  padding-top: 175px;
+  padding-top: 173px;
+}
+main .card .heart-resp {
+  position: absolute;
+  right: 11%;
 }
 main .card .like {
   position: absolute;
@@ -462,23 +522,63 @@ main .card .like:hover {
 }
 
 @media screen and (min-width: 768px) {
+  main h2 {
+    margin-left: 142px;
+  }
   main .restaurant {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  main .restaurant h2 {
-    position: relative;
-    left: -40%;
-  }
   main .card {
     width: 60%;
   }
   main .card .heart {
-    right: 23%;
+    right: 25%;
+  }
+  main .card .heart-resp {
+    right: 25%;
   }
   main .card .new {
     right: 21%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main h2 {
+    margin-left: 62px;
+  }
+  main .restaurant {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  main .card {
+    width: 42%;
+  }
+  main .card .heart {
+    right: 9%;
+  }
+  main .card .heart-resp {
+    right: 53%;
+  }
+  main .card .new {
+    right: 8%;
+  }
+  main .new-resp {
+    left: 41%;
+  }
+  main .like-resp {
+    position: absolute;
+    left: 0rem;
+    padding-top: 1px;
+    color: transparent;
+    background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 1;
+  }
+  main .like-resp:hover {
+    opacity: 1;
   }
 }
 header i {
@@ -539,18 +639,34 @@ main .btn-menu h4 {
   font-size: 18px;
   margin: 0;
   padding: 0;
-  margin-left: 10px;
   padding-top: 15px;
-  padding-bottom: 5px;
 }
 main .btn-menu p {
   font-size: 15px;
 }
 main .price {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: 10px;
-  margin-right: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  min-width: calc(100% - 32px);
+  transition: min-width 0.5s;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+main .price div {
+  display: flex;
+  min-width: 100%;
+}
+main .price h4 {
+  width: 100%;
+}
+main .price p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 90%;
 }
 main .commander {
   display: flex;
@@ -558,4 +674,54 @@ main .commander {
 }
 main .commander a {
   color: #FFF;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    background-color: #FFF;
+  }
+  main .position {
+    width: 71%;
+    left: 15%;
+    top: 300px;
+  }
+  main .position h2 {
+    display: flex;
+    justify-content: center;
+  }
+  main .position h2 i {
+    right: 25%;
+  }
+  main .menu {
+    position: relative;
+    left: 15%;
+    width: 71%;
+  }
+  main .entrée {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .entrée h3 {
+    position: relative;
+    right: 35%;
+  }
+  main .plat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .plat h3 {
+    position: relative;
+    right: 35%;
+  }
+  main .dessert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .dessert h3 {
+    position: relative;
+    right: 35%;
+  }
 }/*# sourceMappingURL=main.css.map */

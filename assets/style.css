@@ -84,6 +84,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
+  transition: opacity 0.8s;
 }
 .like:hover {
   opacity: 1;
@@ -499,7 +500,11 @@ main .card p {
 main .card .heart {
   position: absolute;
   right: 10%;
-  padding-top: 175px;
+  padding-top: 173px;
+}
+main .card .heart-resp {
+  position: absolute;
+  right: 11%;
 }
 main .card .like {
   position: absolute;
@@ -530,6 +535,9 @@ main .card .like:hover {
   main .card .heart {
     right: 25%;
   }
+  main .card .heart-resp {
+    right: 25%;
+  }
   main .card .new {
     right: 21%;
   }
@@ -549,15 +557,14 @@ main .card .like:hover {
   main .card .heart {
     right: 9%;
   }
+  main .card .heart-resp {
+    right: 53%;
+  }
   main .card .new {
     right: 8%;
   }
   main .new-resp {
     left: 41%;
-  }
-  main .heart-resp {
-    position: absolute;
-    left: 45%;
   }
   main .like-resp {
     position: absolute;
